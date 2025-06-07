@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge Concert - 運営ルール</title>
+  
+  <!-- Google Fontsの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /*
+     * === 全体設定 ===
+     * 洗練されたタイポグラフィと配色で、上品な雰囲気を演出
+     */
+    :root {
+      --font-serif: 'Shippori Mincho', serif;
+      --font-sans: 'Noto Sans JP', sans-serif;
+      --color-bg: #fdfaf6; /* 温かみのあるオフホワイト */
+      --color-text: #4a4a4a; /* 可読性の高いダークグレー */
+      --color-primary: #bfa05b; /* 上品なゴールド */
+      --color-white: #ffffff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /*
+     * === コンテナ ===
+     * カードデザインで情報をまとめ、柔らかな影で立体感をプラス
+     */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--color-white);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      overflow: hidden; /* 角丸を維持するため */
+      animation: fadeIn 1s ease-out; /* ふわりと表示されるアニメーション */
+    }
+
+    /*
+     * === ヘッダー ===
+     * タイトルを際立たせるデザイン
+     */
+    header {
+      padding: 40px;
+      text-align: center;
+      background-color: #f7f3ed; /* 少し濃い背景色で区別 */
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: 2.5em;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin: 0;
+      letter-spacing: 0.1em; /* 文字間を広げて優雅に */
+    }
+
+    /*
+     * === コンテンツセクション ===
+     * 見出しやリストを見やすく整理
+     */
+    .content-area {
+      padding: 20px 40px 40px;
+    }
+
+    section:not(:last-child) {
+      margin-bottom: 2em;
+      padding-bottom: 2em;
+      border-bottom: 1px solid #eee;
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 1.8em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      padding-left: 0.5em;
+      border-left: 5px solid var(--color-primary);
+      color: #333;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      margin-top: 1.5em;
+      margin-bottom: 0.8em;
+      color: #555;
+      font-weight: 700;
+      border-bottom: 2px dotted #e0e0e0;
+      padding-bottom: 0.3em;
+    }
+
+    /*
+     * === リスト ===
+     * デフォルトのスタイルを消し、カスタムマーカーで美しく
+     */
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1.8em;
+      margin-bottom: 0.8em;
+    }
+
+    li::before {
+      content: '♪'; /* 音符のアイコン */
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--color-primary);
+      font-size: 1.2em;
+      line-height: 1;
+    }
+
+    /*
+     * === 注釈 (.note) ===
+     * 背景色を変えて視覚的に区別しやすく
+     */
+    .note {
+      font-size: 0.9em;
+      margin: 1em 0 1.5em 0;
+      padding: 1em 1.5em;
+      background-color: #f9f9f9;
+      border-left: 4px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    .note ul {
+        margin-top: 0.8em;
+    }
+
+    /*
+     * === フッター ===
+     * 最後の挨拶を丁寧にまとめる
+     */
+    footer {
+      text-align: center;
+      padding: 30px 40px;
+      font-size: 0.95em;
+      background-color: #f7f3ed;
+    }
+
+    /*
+     * === アニメーション ===
+     * ページ読み込み時に要素をふわりと表示
+     */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <h1>チャレンジコンサート<br>運営ルール</h1>
+    </header>
+
+    <div class="content-area">
+      <section>
+        <h2>参加費</h2>
+        <ul>
+          <li>基本参加費：1,000円／おひとり様</li>
+          <li>曲数制限：原則2曲以内、合計5分以内</li>
+        </ul>
+
+        <h3>連弾・アンサンブル</h3>
+        <ul>
+          <li>講師：無料</li>
+          <li>講師以外の出演者：1,000円／人・回</li>
+        </ul>
+        
+        <div class="note">
+            <p style="margin-top:0;">※ 参加費の例：</p>
+            <ul>
+                <li>ソロ１曲 → 各1,000円</li>
+                <li>ソロ後に別メンバーとアンサンブル → 各1,000円＋アンサンブル出演者各1,000円</li>
+                <li>同メンバーでの連弾 → それぞれ1,000円ずつ徴収</li>
+                <li>教材機器（クラビノーヴァ等）を使い2曲演奏 → 2,000円</li>
+                <li>ご家族などグループ演奏：原則は参加人数×1,000円（ご相談可）</li>
+                <li>特殊ケース：個別に吉田までご相談ください</li>
+            </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>キャンセル・返金規定</h2>
+        <ul>
+          <li>申込締切：開催日の１週間前</li>
+        </ul>
+
+        <h3>返金対応</h3>
+        <ul>
+          <li>〆切（開催日の7日前）まで → 全額返金</li>
+          <li>〆切後～当日 → 原則返金不可</li>
+        </ul>
+        <p class="note">※ インフルエンザ・入院など、主催者が認めた理由の場合は例外対応いたします。</p>
+      </section>
+    </div>
+
+    <footer>
+      <p>以上、運営の円滑化のためご理解・ご協力をお願いいたします。<br>
+      何か不明点やご相談がありましたら、お気軽に吉田までお声がけください。</p>
+    </footer>
+  </main>
+
+</body>
+</html>
